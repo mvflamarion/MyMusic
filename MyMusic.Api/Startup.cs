@@ -32,7 +32,7 @@ namespace MyMusic.Api
             services.AddControllers();
 
             services.AddDbContext<MyMusicDbContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("Default"),
+                options.UseSqlite(Configuration.GetConnectionString("Default"),
                 x => x.MigrationsAssembly("MyMusic.Data"))
             );
 
