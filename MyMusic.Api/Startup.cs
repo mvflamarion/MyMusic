@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,7 +18,7 @@ using MyMusic.Core.Services;
 using MyMusic.Data;
 using MyMusic.Data.Repositories;
 using MyMusic.Services;
-
+using Swashbuckle.AspNetCore.Swagger;
 namespace MyMusic.Api
 {
     public class Startup
@@ -44,6 +45,8 @@ namespace MyMusic.Api
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "My Music",
                 Version = "v1"});
             });
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
