@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyMusic.Api.Resources;
-using MyMusic.Api.Validators;
+using MyMusic.Api.Validations;
 using MyMusic.Core.Models;
 using MyMusic.Core.Services;
 

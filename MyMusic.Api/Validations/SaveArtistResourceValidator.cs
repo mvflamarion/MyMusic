@@ -1,7 +1,7 @@
 using FluentValidation;
 using MyMusic.Api.Resources;
 
-namespace MyMusic.Api.Validators
+namespace MyMusic.Api.Validations
 {
     public class SaveArtistResourceValidator : AbstractValidator<SaveArtistResource>
     {
